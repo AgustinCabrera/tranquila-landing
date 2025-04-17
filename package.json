@@ -7,7 +7,7 @@
     "dev": "npm run sass:watch",
     "sass:build": "sass --no-source-map scss:css",
     "sass:watch": "sass --no-source-map --watch scss:css",
-    "serve": "lite-server"
+    "server": "lite-server"
   },
   "author": "Brad Traversy",
   "license": "MIT",
