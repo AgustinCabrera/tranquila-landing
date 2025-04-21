@@ -13,6 +13,44 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="images/Logos/Favicon.png"/>
     <title>La Tranquila</title>
+    <style>
+      /* Custom styles to fix spacing */
+      .header {
+        min-height: auto !important; /* Override vh-100 */
+        padding-top: 120px !important; /* Adjust top padding to account for navbar */
+        padding-bottom: 40px !important; /* Reduce bottom padding */
+      }
+      
+      .about {
+        padding-top: 40px !important; /* Reduce top padding of about section */
+      }
+      
+      /* Add a feature highlights section */
+      .feature-highlights {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        margin-bottom: -40px; /* Pull the about section up */
+      }
+      
+      .feature-card {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      .feature-icon {
+        transition: all 0.3s ease;
+      }
+      
+      .feature-card:hover .feature-icon {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
 
   <body id="home">
@@ -54,15 +92,14 @@
 
     <!-- HEADER -->
     <!-- Header Start -->
-    <header class="header position-relative py-7 vh-100">
-      <img src="images/Decorative/decorative1.png" class="decoration-image1 position-absolute d-none d-lg-block">
+    <header class="header position-relative py-7">
       <img src="images/Decorative/decorative2.png" class="decoration-image2 position-absolute d-none d-lg-block">
 
       <div class="container">
-        <div class="row mb-5 text-center">
+        <div class="row mb-4 text-center">
           <div class="col-12 text-container">
 
-            <h1 class="display-1 w-75 m-auto fw-bold">Un refugio en Aldea Brasilera</h1>
+            <h1 class="display-1 w-75 m-auto fw-bold">La Tranquila</h1>
             <p class="lead w-75 m-auto">
               Disfruta de la tranquilidad y el encanto de una casa rodeada de naturaleza, donde cada atardecer y cada rincón te invitan a relajarte y vivir una experiencia única.
             </p>
@@ -72,17 +109,51 @@
               <a href="#about" class="btn btn-outline-primary">Conocer más</a>
             </div>
           </div>
-
-        <!-- Image -->
-        <div class="row text-center mt-4">
-          <div class="col-12">
-            <img class="header-img" src="images/Outside/outside03.jpg" alt="Header Image">
-          </div>
-        <!-- Image -->
         </div>
       </div>
     </header>
     <!-- Header End -->
+
+    <!-- Feature Highlights Section -->
+    <div id="feature-highlights" class="feature-highlights">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4 h-100 rounded-4 bg-light">
+              <div class="feature-icon bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12V3"></path><path d="m8 7 4-4 4 4"></path><path d="M20 21H4"></path><path d="M12 18v-2"></path><path d="M8 18v-4"></path><path d="M16 18v-6"></path></svg>
+              </div>
+              <h3 class="h5 fw-bold">Atardeceres Mágicos</h3>
+              <p class="mb-0">Disfruta de impresionantes puestas de sol.</p>
+            </div>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4 h-100 rounded-4 bg-light">
+              <div class="feature-icon bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <h3 class="h5 fw-bold">Ubicación Privilegiada</h3>
+              <p class="mb-0">Situada en el corazón del litoral argentino, perfecta para explorar Entre Ríos.</p>
+            </div>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="col-md-4">
+            <div class="feature-card text-center p-4 h-100 rounded-4 bg-light">
+              <div class="feature-icon bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <h3 class="h5 fw-bold">Comodidad Total</h3>
+              <p class="mb-0">Espacios amplios y acogedores diseñados para que te sientas como en casa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Highlights End -->
 
     <!-- ABOUT -->
     <!-- About Section Start -->
@@ -202,7 +273,7 @@
           <!-- Column 1 -->
           <div class="col-lg-6">
 
-            <h1 class="display-4 fw-bold">¡Has tu reservación hoy!</h1>
+            <h1 class="display-4 fw-bold">¡Has tu reserva hoy!</h1>
             <p class="lead fw-light">Comunícate con <span class="fw-bold">Osvaldo Kramer</span> y consulta las fechas disponibles para realizar tu reservación.</p>
             <div>
               <p class="lead fw-light"><img class="icon me-2" src="images/Icons/gmailIcon.png">okramer.lux@gmail.com</p>
@@ -214,7 +285,7 @@
 
           <!-- Column 2 -->
           <div class="col-lg-6">
-            <img src="images/Outside/outside03.jpg" class="about-img-2 img-fluid rounded-4 d-none d-lg-block">
+            <img src="images/Outside/outside03.png" class="about-img-2 img-fluid rounded-4 d-none d-lg-block">
           </div>
           <!-- Column 2 -->
         </div>
